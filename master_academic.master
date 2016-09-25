@@ -1,0 +1,15 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/x_master.master" %>
+
+<asp:Content id="DoesntMatter" ContentPlaceHolderID="main" runat="server">
+	<asp:panel runat="server" id="container">
+		<asp:panel runat="server" id="intro_a" CssClass="col-lg-12">
+    	    <asp:ContentPlaceHolder ID="Intro" runat="server"/>
+		</asp:panel>
+		<asp:panel runat="server" id="school_1" CssClass="col-lg-6">
+    	    <asp:ContentPlaceHolder ID="Strayer" runat="server" />
+		</asp:panel>
+		<asp:panel runat="server" id="school_2" CssClass="col-lg-6">
+    	    <asp:ContentPlaceHolder ID="JCC" runat="server" />
+    	</asp:panel>
+    </asp:panel>
+</asp:Content>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<%@ Master Language="C#" %>
+<html dir="ltr">
+
+<head runat="server">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>DKE CV</title>
+<asp:ContentPlaceHolder id="head" runat="server">
+	<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet">
+	<link href="jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" rel="stylesheet">
+
+<script src="scripts/jquery-3.0.0.min.js"></script>
+<script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script src="scripts/script.js"></script>
+
+	<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Cuprum|El+Messiri|Special+Elite" rel="stylesheet">
+	<link href="favicon.png" rel="icon" sizes="16x16" type="image/png">
+</asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+<form id="Wrapper" runat="server">
+	<div class="container col-lg-12">
+		<div class="navbar-static-top">
+			<div class="col-lg-1 logo">
+				<asp:ContentPlaceHolder runat ="server" ID="logo">
+					<a href="index.aspx">
+					<img src="resources/DE_Logo_64.png" alt=""/></a>
+				</asp:ContentPlaceHolder>
+			</div>
+			<div class="col-lg-11">
+				<asp:Menu runat="server" id="Nav" MaximumDynamicDisplayLevels="2" orientation="Horizontal" SkipLinkText="">
+					<DynamicMenuItemStyle CssClass="ui-button" />
+					<Items>
+						<asp:MenuItem Text="Home" navigateurl="index.aspx"></asp:MenuItem>
+						<asp:MenuItem Text="About" Value="index.html"></asp:MenuItem>
+						<asp:MenuItem Text="Work" Value="index.html"></asp:MenuItem>
+						<asp:MenuItem Text="Academic" navigateurl="academic.aspx">
+							<asp:MenuItem Text="Strayer" navigateurl="strayer.aspx"></asp:MenuItem>
+							<asp:MenuItem Text="JCTC" navigateurl="jcc.aspx"></asp:MenuItem>
+						</asp:MenuItem>
+						<asp:MenuItem Text="Personal" Value="index.html"></asp:MenuItem>
+						<asp:MenuItem Text="Contact" Value="index.html"></asp:MenuItem>	
+					</Items>
+				</asp:Menu>
+			</div>
+		</div>
+		<section class="col-lg-12" id="title">
+			<h1>Dennis Elmore</h1>
+		</section>
+		<section class="col-lg-2 blank">&nbsp;</section>
+		<section class="col-lg-8" id="content">
+			<asp:ContentPlaceHolder runat="server" id="main"></asp:ContentPlaceHolder>
+		</section>
+		<section class="col-lg-2 blank">&nbsp;</section>
+
+		<footer class="col-lg-12" id="footer">
+			<div class="col-lg-2 blank">&nbsp;</div>
+			<div class="col-lg-8" id="foot-info">
+				<div class="col-lg-9" id="foot-links">
+					Fix me! Sticky Footer | Footer links in a nav inline block ul li
+				</div>
+				<div class="col-lg-3" id="foot-copyright">
+					<sub>&copy;Copyright 2016 Dennis Elmore</sub>
+				</div>
+			</div>
+			<div class="col-lg-2 blank">&nbsp;</div>
+		</footer>
+
+	</div>
+</form>
+
+</body>
+
+</html>
